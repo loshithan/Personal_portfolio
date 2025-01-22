@@ -8,7 +8,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" style={{ padding: '4rem 2rem', backgroundColor: '#0a0a23' }}>
+    <section id="services" style={{ padding: '4rem 2rem' }}>
       <h2>Services</h2>
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
         {services.map((service, index) => (

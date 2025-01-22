@@ -14,7 +14,7 @@ function App() {
   return (
     <Layout>
       <AppHeader />
-      <Content style={{ marginTop: 64 }}>
+      <Content >
         <Hero />
         <About />
         <Services />

@@ -1,0 +1,17 @@
+.hero-section{
+     text-align: 'left'
+}
+.hero-section h1, .hero-section h2 {
+    margin-top: 0;
+}
+.hero-section h1{
+    margin-bottom: 1.5rem;
+}
+.hero-description{
+    width: 25%;
+    margin-top: 0 !important;
+}
+.hero-description p{
+    margin-top: 0 !important;
+}
+  

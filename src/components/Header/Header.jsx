@@ -1,5 +1,6 @@
-import React from 'react';
-import { Layout, Menu } from 'antd';
+import React from "react";
+import { Layout, Menu } from "antd";
+import './header.css'
 
 const { Header } = Layout;
 
@@ -7,25 +8,66 @@ export default function AppHeader() {
   return (
     <Header
       style={{
-        position: 'fixed',
+        position: "sticky",
         top: 0,
-        width: '100%',
-        zIndex: 1000,
-        backgroundColor: '#1c1c3d',
+        width: "100%",
+        zIndex: 1,
+        backgroundColor:'var(--secondary-color) !important'
+       
       }}
     >
-      <div style={{ float: 'left', color: '#fff', fontSize: '20px', fontWeight: 'bold' }}>
+      <div
+        style={{
+          float: "left",
+          color: "var(--primary-color)",
+          fontSize: "20px",
+          fontWeight: "bold",
+        }}
+      >
         Loshithan Paramaguru
       </div>
       <Menu
         theme="dark"
         mode="horizontal"
-        style={{ marginLeft: 'auto', display: 'flex', justifyContent: 'flex-end' }}
+        style={{
+          marginLeft: "auto",
+          display: "flex",
+          justifyContent: "flex-end",
+          backgroundColor: "var(--secondary-color)", // setting the custom background color
+        }}
         items={[
-          { key: 'about', label: <a href="#about">About Me</a> },
-          { key: 'services', label: <a href="#services">Services</a> },
-          { key: 'projects', label: <a href="#projects">Projects</a> },
-          { key: 'contact', label: <a href="#contact">Contact</a> },
+          {
+            key: "about",
+            label: (
+              <a href="#about" className="menu-item">
+                About Me
+              </a>
+            ),
+          },
+          {
+            key: "services",
+            label: (
+              <a href="#services" className="menu-item">
+                Services
+              </a>
+            ),
+          },
+          {
+            key: "projects",
+            label: (
+              <a href="#projects" className="menu-item">
+                Projects
+              </a>
+            ),
+          },
+          {
+            key: "contact",
+            label: (
+              <a href="#contact" className="menu-item">
+                Contact
+              </a>
+            ),
+          },
         ]}
       />
     </Header>

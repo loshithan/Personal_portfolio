@@ -3,7 +3,7 @@
 import React from 'react';
 export default function About() {
   return (
-    <section id="about" style={{ padding: '4rem 2rem', backgroundColor: '#1c1c3d' }}>
+    <section id="about" style={{ padding: '4rem 2rem' }}>
       <h2>About Me</h2>
       <p>
         Hi, my name is Loshithan. I am a Fullstack web developer, UI designer, and Mobile developer.

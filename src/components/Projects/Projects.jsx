@@ -8,7 +8,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" style={{ padding: '4rem 2rem', backgroundColor: '#1c1c3d' }}>
+    <section id="projects" style={{ padding: '4rem 2rem'}}>
       <h2>Projects</h2>
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
         {projects.map((project, index) => (
