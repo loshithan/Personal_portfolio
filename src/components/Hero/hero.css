@@ -14,4 +14,8 @@
 .hero-description p{
     margin-top: 0 !important;
 }
+.custom-button:hover {
+    border-color: #6c63ff !important; /* Change border color on hover */
+    color:#6c63ff !important ;
+}
   
