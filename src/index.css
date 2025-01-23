@@ -34,6 +34,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--secondary-color);
+  overflow-x: hidden;
 }
 
 h1 {

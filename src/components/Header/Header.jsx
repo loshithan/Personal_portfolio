@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import './header.css'
+import "./header.css";
+import { motion } from "framer-motion";
 
 const { Header } = Layout;
 
@@ -12,11 +13,13 @@ export default function AppHeader() {
         top: 0,
         width: "100%",
         zIndex: 1,
-        backgroundColor:'var(--secondary-color) !important'
-       
+        backgroundColor: "var(--secondary-color) !important",
       }}
     >
-      <div
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
         style={{
           float: "left",
           color: "var(--primary-color)",
@@ -25,7 +28,8 @@ export default function AppHeader() {
         }}
       >
         Loshithan Paramaguru
-      </div>
+      </motion.div>
+
       <Menu
         theme="dark"
         mode="horizontal"
@@ -39,33 +43,57 @@ export default function AppHeader() {
           {
             key: "about",
             label: (
-              <a href="#about" className="menu-item">
+              <motion.div
+                href="#about"
+                className="menu-item"
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+              >
                 About Me
-              </a>
+              </motion.div>
             ),
           },
           {
             key: "services",
             label: (
-              <a href="#services" className="menu-item">
+              <motion.div
+                href="#services"
+                className="menu-item"
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+              >
                 Services
-              </a>
+              </motion.div>
             ),
           },
           {
             key: "projects",
             label: (
-              <a href="#projects" className="menu-item">
+              <motion.div
+                href="#projects"
+                className="menu-item"
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+              >
                 Projects
-              </a>
+              </motion.div>
             ),
           },
           {
             key: "contact",
             label: (
-              <a href="#contact" className="menu-item">
+              <motion.div
+                href="#contact"
+                className="menu-item"
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+              >
                 Contact
-              </a>
+              </motion.div>
             ),
           },
         ]}
