@@ -43,7 +43,7 @@
 section{
   background-color: var(--secondary-color);
   color:var(--text-color) ;
-  height: 100vh;
+  min-height: 100vh;
 }
 Content{
   padding:0 1rem;

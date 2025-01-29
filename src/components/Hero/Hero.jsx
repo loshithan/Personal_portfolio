@@ -3,7 +3,6 @@ import React from "react";
 import "./hero.css";
 import { Row, Col, Button } from "antd";
 import { motion, stagger } from "framer-motion";
-import { span } from "motion/react-client";
 export default function Hero() {
   const charVariant = {
     hidden: { opacity: 0 },

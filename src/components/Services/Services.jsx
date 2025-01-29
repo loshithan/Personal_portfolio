@@ -1,5 +1,6 @@
 // src/components/Services.jsx
 import React from 'react';
+import './service.css'
 export default function Services() {
   const services = [
     { title: 'UI & UX Designing', description: 'I design beautiful web interfaces with Figma and Adobe XD.' },
@@ -8,7 +9,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" style={{ padding: '4rem 2rem' }}>
+    <section id="services" style={{ padding: '4rem 2rem'}}>
       <h2>Services</h2>
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
         {services.map((service, index) => (
