@@ -32,7 +32,7 @@ jobs:
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}  # Vercel token for authentication
-          vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID }}  # Vercel project ID
-          vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}  # Vercel organization ID
-          vercel_directory: ./dist  # Directory to deploy (Vite's default build output)
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Vercel token for authentication
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Vercel project ID
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Vercel organization ID
+          working-directory: ./dist  # Directory to deploy (Vite's default build output)
