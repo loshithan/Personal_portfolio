@@ -7,6 +7,7 @@ import { FaReact } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
 
+
 export default function Services() {
   const services = [
     {

@@ -8,6 +8,7 @@ import Services from './components/Services/Services';
 import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
 import Tools from './components/Tools/Tools';
+import Contact from './components/Contact/Contact';
 
 const { Content, Footer: AntFooter } = Layout;
 
@@ -20,10 +21,12 @@ function App() {
           itemSelectedBg:"var(--primary-color)",
           algorithm: true, // Enable algorithm
         },
-        // Input: {
-        //   colorPrimary: '#eb2f96',
-        //   algorithm: true, // Enable algorithm
-        // }
+        Carousel: {
+          arrowSize:32,
+          dotGap:8,
+          arrowOffset	:0,
+          dotOffset:0
+        }
       },
     }}>
     <Layout>
@@ -34,8 +37,10 @@ function App() {
         <Services />
         <Tools/>
         <Projects />
+        <Contact/>
       </Content>
-      <AntFooter style={{ textAlign: 'center' }}>©2025 Loshithan Paramaguru</AntFooter>
+      <AntFooter style={{ textAlign: 'center',backgroundColor:'var(--secondary-color)',color:'var(--text-color)' }}>  <p>© 2025 Loshithan Paramaguru. All rights reserved.</p>
+      </AntFooter>
     </Layout>
     </ConfigProvider>
   );
