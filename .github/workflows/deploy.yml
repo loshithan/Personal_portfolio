@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages  # Trigger the workflow on push to the gh-pages branch
+      - main  # Trigger the workflow on push to the gh-pages branch
 
 jobs:
   build-and-deploy:
