@@ -3,6 +3,7 @@ import React from "react";
 import "./hero.css";
 import { Row, Col, Button } from "antd";
 import { motion, stagger } from "framer-motion";
+import circle from '../../../public/assets/circle.png'
 export default function Hero() {
   const charVariant = {
     hidden: { opacity: 0 },
@@ -97,7 +98,7 @@ export default function Hero() {
           <div>
             {" "}
             <motion.img
-              src="src/assets/circle.png"
+              src={circle}
               alt="circle"
               style={{ height: "450px" }}
               initial={{ scale: 0, opacity: 0 }}
