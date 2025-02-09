@@ -1,9 +1,11 @@
 // src/components/Hero.jsx
-import React from "react";
+import React, { useRef } from "react";
 import "./hero.css";
 import { Row, Col, Button } from "antd";
-import { motion, stagger } from "framer-motion";
+import { motion, stagger, useInView } from "framer-motion";
 export default function Hero() {
+  const ref = useRef();
+  const isInView = useInView(ref, { once: "true" });
   const charVariant = {
     hidden: { opacity: 0 },
     reveal: { opacity: 1 },
@@ -22,25 +24,45 @@ export default function Hero() {
         initial={{ x: "-100%" }}
         animate={{ x: "100%" }}
         transition={{
-          duration: 30, 
-          repeat: Infinity, 
-          ease: "linear", 
-          repeatType: 'loop'
+          duration: 30,
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop",
         }}
       >
         {" "}
         FULLSTACK DOTNET DEVELOPER{" "}
       </motion.div>{" "}
       <Row align={"middle"} gutter={16}>
-        <div>
-          <h2 style={{ marginTop: "0" }}>Hello, I’m</h2>
-          <h1 style={{ fontSize: "3rem" }}>Loshithan Paramaguru</h1>
+        <div ref={ref}>
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial={"hidden"}
+            animate={"visible"}
+            style={{ marginTop: "0" }}
+          >
+            Hello, I’m
+          </motion.h2>
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial={"hidden"}
+            animate={"visible"}
+            style={{ fontSize: "3rem" }}
+          >
+            Loshithan Paramaguru
+          </motion.h1>
           <div className="hero-description">
             <motion.p
               initial={"hidden"}
               whileInView={"reveal"}
               transition={{ staggerChildren: 0.02 }}
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               {textCharArr.map((char) => (
                 <motion.span
