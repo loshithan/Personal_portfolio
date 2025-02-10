@@ -14,7 +14,7 @@ export default function Hero() {
   const backgroundVariantBtn = {
     initial: {
       backgroundColor: "#6c63ff",
-      color:"#fff"
+      color: "#fff",
     },
     hover: {
       backgroundColor: "#fff",
@@ -39,7 +39,7 @@ export default function Hero() {
       y: 0,
     },
     hover: {
-      y: -20,
+      y: -30,
       transition: {
         duration: 1.125,
         ease: [0.19, 1, 0.22, 1],
@@ -75,7 +75,7 @@ export default function Hero() {
   const outlineBackgroundVariantBtn = {
     initial: {
       backgroundColor: "#fff",
-      color:"black",
+      color: "black",
     },
     hover: {
       backgroundColor: "transparent",
@@ -85,7 +85,7 @@ export default function Hero() {
         duration: 0.1,
         ease: [0.19, 1, 0.22, 1],
       },
-      borderColor:"#fff"
+      borderColor: "#fff",
     },
     animate: {
       backgroundColor: "#fff",
@@ -168,17 +168,40 @@ export default function Hero() {
                 animate="animate"
                 variants={backgroundVariantBtn}
               >
-                <motion.p variants={firstTextVariant} style={{ margin: 0, fontWeight: 700 }}>About me</motion.p>
-                <motion.span variants={firstTextVariant} className="material-icons" style={{ fontSize: "1.2rem" }}>
-                  person
-                </motion.span>
-                <motion.p variants={secondTextVariant} aria-hidden style={{ margin: 0, fontWeight: 700 }}>About me</motion.p>
-                <motion.span variants={secondTextVariant} aria-hidden className="material-icons" style={{ fontSize: "1.2rem" }}>
-                  person
-                </motion.span>
+                <div className="overflow-hidden relative">
+                  <motion.p
+                    variants={firstTextVariant}
+                    style={{ margin: 0, fontWeight: 700 }}
+                  >
+                    About me
+                    <motion.span
+                      variants={firstTextVariant}
+                      style={{ fontSize: "1.2rem" }}
+                      className=" material-icons "
+                    >
+                      person
+                    </motion.span>
+                  </motion.p>
+
+                  <motion.p
+                    variants={secondTextVariant}
+                    aria-hidden
+                    style={{ margin: 0, fontWeight: 700 }}
+                    className="absolute top-0 left-0 "
+                  >
+                    About me
+                    <motion.span
+                      variants={secondTextVariant}
+                      aria-hidden
+                      style={{ fontSize: "1.2rem" }}
+                      className=" material-icons "
+                    >
+                      person
+                    </motion.span>
+                  </motion.p>
+                </div>
               </motion.button>
               <motion.button
-                // className="custom-button"
                 size="large"
                 style={{
                   margin: "0 1rem",
@@ -187,7 +210,6 @@ export default function Hero() {
                   display: "flex", // Use flexbox for alignment
                   alignItems: "center",
                   justifyContent: "space-between", // Adjust spacing between items
-                  // borderColor:"#6c63ff"
                 }}
                 initial="initial"
                 whileHover="hover"
@@ -196,10 +218,37 @@ export default function Hero() {
                 type="default"
                 // variant="outlined"
               >
-                <p style={{ margin: 0, fontWeight: 700 }}>Projects</p>
-                <span class="material-icons" style={{ fontSize: "1.2rem" }}>
-                  visibility
-                </span>
+                <div className="overflow-hidden relative">
+                  <motion.p
+                    style={{ margin: 0, fontWeight: 700 }}
+                    variants={firstTextVariant}
+                  >
+                    Projects{" "}
+                    <motion.span
+                      class="material-icons"
+                      style={{ fontSize: "1.2rem" }}
+                      variants={firstTextVariant}
+                    >
+                      visibility
+                    </motion.span>
+                  </motion.p>
+                  <motion.p
+                    style={{ margin: 0, fontWeight: 700 }}
+                    aria-hidden
+                    className="absolute top-0 left-0 "
+                    variants={secondTextVariant}
+                  >
+                    Projects{" "}
+                    <motion.span
+                      class="material-icons "
+                      aria-hidden
+                      style={{ fontSize: "1.2rem" }}
+                      variants={secondTextVariant}
+                    >
+                      visibility
+                    </motion.span>
+                  </motion.p>
+                </div>
               </motion.button>
             </Row>
           </div>
