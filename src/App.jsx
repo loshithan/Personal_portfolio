@@ -26,6 +26,9 @@ function App() {
           dotGap:8,
           arrowOffset	:0,
           dotOffset:0
+        },
+        Menu:{
+          darkItemSelectedBg:"transparent"
         }
       },
     }}>

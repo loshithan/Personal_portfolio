@@ -7,5 +7,8 @@
   .menu-item a:hover {
     color: var(--primary-color) !important; /* Assuming --primary-color is defined in your CSS variables */
   }
+  .darkItemSelectedBg{
+    background-color: transparent !important;
+  }
 
   
