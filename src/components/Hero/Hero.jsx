@@ -2,18 +2,101 @@
 import React, { useRef } from "react";
 import "./hero.css";
 import { Row, Col, Button } from "antd";
-import { motion, stagger, useInView } from "framer-motion";
+import { color, motion, stagger, useInView } from "framer-motion";
 export default function Hero() {
   const ref = useRef();
   const isInView = useInView(ref, { once: "true" });
-  const charVariant = {
-    hidden: { opacity: 0 },
-    reveal: { opacity: 1 },
+  const variant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
   };
-  const textCharArr =
-    `Freelance UI designer, Fullstack developer, & Data Miner. I create seamless web experiences for end-users.`
-      .trim()
-      .split("");
+  const transition = { duration: 0.5, ease: "easeOut" };
+  const backgroundVariantBtn = {
+    initial: {
+      backgroundColor: "#6c63ff",
+      color:"#fff"
+    },
+    hover: {
+      backgroundColor: "#fff",
+      color: "#6c63ff",
+      transition: {
+        delay: 0.1,
+        duration: 0.5,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+    animate: {
+      backgroundColor: "#6c63ff",
+      transition: {
+        delay: 0.1,
+        duration: 0.5,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+  };
+  const firstTextVariant = {
+    initial: {
+      y: 0,
+    },
+    hover: {
+      y: -20,
+      transition: {
+        duration: 1.125,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1.125,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+  };
+  const secondTextVariant = {
+    initial: {
+      y: 20,
+    },
+    hover: {
+      y: 0,
+      transition: {
+        duration: 1.125,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+    animate: {
+      y: 20,
+      transition: {
+        duration: 1.125,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+  };
+  const outlineBackgroundVariantBtn = {
+    initial: {
+      backgroundColor: "#fff",
+      color:"black",
+    },
+    hover: {
+      backgroundColor: "transparent",
+      color: "#fff",
+      transition: {
+        delay: 0,
+        duration: 0.1,
+        ease: [0.19, 1, 0.22, 1],
+      },
+      borderColor:"#fff"
+    },
+    animate: {
+      backgroundColor: "#fff",
+      transition: {
+        delay: 0.1,
+        duration: 0.1,
+        ease: [0.19, 1, 0.22, 1],
+      },
+    },
+  };
+
   return (
     <section
       className="hero-section"
@@ -33,13 +116,11 @@ export default function Hero() {
         {" "}
         FULLSTACK DOTNET DEVELOPER{" "}
       </motion.div>{" "}
-      <Row align={"middle"} gutter={16}>
-        <div ref={ref}>
+      <Row align={"middle"} gutter={[16, 16]} style={{ gap: "20px" }}>
+        <Col ref={ref}>
           <motion.h2
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={variant}
+            transition={transition}
             initial={"hidden"}
             animate={"visible"}
             style={{ marginTop: "0" }}
@@ -47,87 +128,95 @@ export default function Hero() {
             Hello, I’m
           </motion.h2>
           <motion.h1
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={variant}
             initial={"hidden"}
             animate={"visible"}
+            transition={transition}
             style={{ fontSize: "3rem" }}
           >
             Loshithan Paramaguru
+            <span style={{ color: "var(--primary-color)" }}>.</span>
           </motion.h1>
-          <div className="hero-description">
-            <motion.p
-              initial={"hidden"}
-              whileInView={"reveal"}
-              transition={{ staggerChildren: 0.02 }}
-              viewport={{ once: true }}
-            >
-              {textCharArr.map((char) => (
-                <motion.span
-                  key={char}
-                  variants={charVariant}
-                  transition={{ duration: 0.5 }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </motion.p>
-          </div>
-          <div style={{ marginTop: "1rem" }}>
+          <motion.h3
+            variants={variant}
+            initial={"hidden"}
+            animate={"visible"}
+            style={{ fontSize: "3rem" }}
+            transition={transition}
+          >
+            <span style={{ color: "GrayText" }}>I'm a</span>{" "}
+            <span style={{ color: "var(--primary-color)" }}>
+              Full Stack Developer
+            </span>
+          </motion.h3>
+          <div style={{ marginTop: "2rem" }}>
             <Row gutter={16} style={{ marginLeft: "-16px" }}>
-              <Button
+              <motion.button
+                size="large"
                 style={{
                   margin: "0 1rem",
                   padding: "0.5rem 1rem",
-                  backgroundColor: "#6c63ff",
                   border: "none",
-                  color: "#fff",
                   cursor: "pointer",
                   display: "flex", // Use flexbox for alignment
                   alignItems: "center",
                   justifyContent: "space-between", // Adjust spacing between items
                 }}
                 type="default"
+                initial="initial"
+                whileHover="hover"
+                animate="animate"
+                variants={backgroundVariantBtn}
               >
-                <p style={{ margin: 0 }}>About Me</p>
-                <span className="material-icons" style={{ fontSize: "1.2rem" }}>
+                <motion.p variants={firstTextVariant} style={{ margin: 0, fontWeight: 700 }}>About me</motion.p>
+                <motion.span variants={firstTextVariant} className="material-icons" style={{ fontSize: "1.2rem" }}>
                   person
-                </span>
-              </Button>
-              <Button
-                className="custom-button"
+                </motion.span>
+                <motion.p variants={secondTextVariant} aria-hidden style={{ margin: 0, fontWeight: 700 }}>About me</motion.p>
+                <motion.span variants={secondTextVariant} aria-hidden className="material-icons" style={{ fontSize: "1.2rem" }}>
+                  person
+                </motion.span>
+              </motion.button>
+              <motion.button
+                // className="custom-button"
+                size="large"
                 style={{
                   margin: "0 1rem",
                   padding: "0.5rem 1rem",
-                  backgroundColor: " transparent",
-                  color: "#fff",
                   cursor: "pointer",
+                  display: "flex", // Use flexbox for alignment
+                  alignItems: "center",
+                  justifyContent: "space-between", // Adjust spacing between items
+                  // borderColor:"#6c63ff"
                 }}
+                initial="initial"
+                whileHover="hover"
+                animate="animate"
+                variants={outlineBackgroundVariantBtn}
                 type="default"
+                // variant="outlined"
               >
-                <p style={{ margin: 0 }}>Projects</p>
+                <p style={{ margin: 0, fontWeight: 700 }}>Projects</p>
                 <span class="material-icons" style={{ fontSize: "1.2rem" }}>
                   visibility
                 </span>
-              </Button>
+              </motion.button>
             </Row>
           </div>
-        </div>
-        <div>
+        </Col>
+        <Col>
           <div>
             {" "}
             <motion.img
               src="src/assets/circle.png"
               alt="circle"
-              style={{ height: "450px" }}
+              style={{ height: "400px" }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 2, ease: "easeInOut" }}
             />{" "}
           </div>{" "}
-        </div>
+        </Col>
       </Row>
     </section>
   );

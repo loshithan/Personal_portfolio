@@ -2,11 +2,23 @@
   text-align: "left";
 }
 .hero-section h1,
-.hero-section h2 {
-  margin-top: 0;
+.hero-section h2,.hero-section h3  {
+  margin-top: 0 !important;
 }
 .hero-section h1 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px !important;
+  font-size: 3.5rem !important;
+  font-weight: 900;
+}
+.hero-section h2 {
+  margin-bottom: 15px;
+  font-size: 2.5rem !important;
+  font-weight: 900;
+}
+.hero-section h3 {
+  margin-bottom: 15px;
+  font-size: 2.5rem !important;
+  font-weight: 500;
 }
 .hero-description {
   width: 40%;
@@ -29,4 +41,7 @@
   color: rgba(255, 255, 255, 4%); /* Light color for background effect */
   white-space: nowrap;
   pointer-events: none; /* Ensures the text doesn't interfere with other elements */
+}
+button{
+  border-radius: 0% !important;
 }
