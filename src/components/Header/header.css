@@ -1,14 +1,22 @@
 /* header.css */
 .menu-item a {
-    color: #fff !important;
-    text-decoration: none;
-  }
-  
-  .menu-item a:hover {
-    color: var(--primary-color) !important; /* Assuming --primary-color is defined in your CSS variables */
-  }
-  .darkItemSelectedBg{
-    background-color: transparent !important;
-  }
+  color: #fff !important;
+  text-decoration: none;
+}
 
-  
+.menu-item a:hover {
+  color: var(
+    --primary-color
+  ) !important; /* Assuming --primary-color is defined in your CSS variables */
+}
+.darkItemSelectedBg {
+  background-color: transparent !important;
+}
+@media screen and (max-width: 767px) {
+  Header {
+    padding: 0 !important;
+  }
+  .logo-name {
+    font-size: 14px !important;
+  }  
+}

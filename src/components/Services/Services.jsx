@@ -50,6 +50,7 @@ export default function Services() {
       >
         {services.map((service, index) => (
           <div
+          className="service-box"
             key={index}
             style={{
               border: "2px solid",
@@ -57,6 +58,10 @@ export default function Services() {
               margin: "1rem",
               width: "25%",
               borderRadius: "5%",
+              display:'flex',
+              justifyContent:'center',
+              alignItems:'center',
+              flexDirection:'column'
             }}
           >
             <div style={{ fontSize: "4rem" }}>{service.icon}</div>

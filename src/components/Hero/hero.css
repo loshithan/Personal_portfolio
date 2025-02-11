@@ -45,3 +45,19 @@
 button{
   border-radius: 0% !important;
 }
+@media screen and (max-width: 767px) {
+
+  .hero-section h1{
+    font-size: 2.5rem !important;
+  }
+  .hero-section h2{
+    font-size: 1.5rem !important;
+  }
+  .hero-section h3{
+    font-size: 1.25rem !important;
+  }
+  .hero-section img{
+    height: 300px !important;
+    padding-top: 30px;
+  }
+}

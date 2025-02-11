@@ -45,3 +45,12 @@
     width: 175%;
 
  }
+ @media screen and (max-width: 767px) {
+   .timeline-content{
+      width: 100% !important;
+      font-size: 10px;
+   } 
+   .about-text{
+      font-size: 1rem;
+   }
+ }
