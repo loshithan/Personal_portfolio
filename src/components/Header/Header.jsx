@@ -245,9 +245,9 @@ export default function AppHeader() {
           {/* Fragment to wrap button and drawer */}
           <Button // Hamburger Button
             type="text"
-            icon={<MenuOutlined />}
+            icon={<MenuOutlined style={{border:'none'}} />}
             onClick={showDrawer}
-            style={{ marginLeft: "auto", color: "var(--primary-color)",float:"right" }} // Style the button
+            style={{ marginLeft: "auto", color: "var(--primary-color)",float:"right",position:'absolute',top:'16px',right:0,border:'none',outline:'none' }} // Style the button
           />
           <Drawer // Mobile Drawer
             title="Navigation"

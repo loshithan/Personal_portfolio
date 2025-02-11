@@ -12,11 +12,15 @@
 .darkItemSelectedBg {
   background-color: transparent !important;
 }
+.ant-drawer-close{
+  outline: none !important;
+  color: #fff !important;
+}
 @media screen and (max-width: 767px) {
   Header {
     padding: 0 !important;
   }
   .logo-name {
-    font-size: 14px !important;
+    font-size: 1.25rem !important;
   }  
 }
