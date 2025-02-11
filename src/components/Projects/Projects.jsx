@@ -2,7 +2,7 @@
 import React from 'react';
 import './project.css'
 import{Button} from 'antd'
-import { Carousel } from 'antd';
+import { Carousel,Grid } from 'antd';
 const contentStyle = {
   margin: 0,
   height: '160px',
@@ -11,6 +11,8 @@ const contentStyle = {
   textAlign: 'center',
   background: '#364d79',
 };
+const { useBreakpoint } = Grid;
+
 // Function to split projects into chunks of 3
 const chunkArray = (array, size) => {
   return Array.from({ length: Math.ceil(array.length / size) }, (_, index) =>
@@ -26,8 +28,9 @@ export default function Projects() {
     { title: 'TaskFlow', description: 'Task management tool with Kanban boards.', link: '#' },
     { title: 'HealthTrack', description: 'Health monitoring app for fitness tracking.', link: '#' },
   ];
+  const screens = useBreakpoint();
    // Group projects into slides of 3 items each
-   const projectChunks = chunkArray(projects, 3);
+   const projectChunks =screens.xs? chunkArray(projects, 1):chunkArray(projects, 3);
 
   return (
     <section id="projects" style={{ padding: '4rem 2rem' }}>

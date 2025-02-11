@@ -35,3 +35,8 @@ Input{
     width: 40%;
     padding-top: 20px;
 }
+@media screen and (max-width: 767px) {
+    .contact-form{
+        width: auto;
+    }
+  }

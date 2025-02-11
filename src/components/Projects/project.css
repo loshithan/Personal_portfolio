@@ -40,4 +40,14 @@
     font-size: 1.5rem;
     font-weight: 700;
   }
+  @media screen and (max-width: 767px) {
+    .ant-carousel .slick-prev {
+      left: -30px; /* Moves it further left */
+    }
+    
+    /* Position right arrow */
+    .ant-carousel .slick-next {
+      right: -30px; /* Moves it further right */
+    }
+  }
   
