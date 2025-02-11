@@ -512,7 +512,7 @@ const variant = {
         </Col>
         <Col xs={24} md={12} style={{ display: "flex", justifyContent: "center" }}>
           <motion.img
-            src="src/assets/circle.png"
+            src="/assets/circle.png"
             alt="circle"
             style={{
               height: "400px",
