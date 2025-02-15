@@ -4,7 +4,7 @@ import "./about.css";
 import { Row, Col, Button } from "antd";
 import { motion, stagger } from "framer-motion";
 import { ClockCircleOutlined } from "@ant-design/icons";
-import { Timeline,Popover } from "antd";
+import { Timeline, Popover } from "antd";
 import TimelineWithPopover from "./TimelineWithPopover";
 export default function About() {
   return (
@@ -16,9 +16,7 @@ export default function About() {
         // height: "100vh", // Ensure it takes full viewport height
       }}
     >
-      <h2 className="about-me">
-        About Me
-      </h2>
+      <h2 className="about-me">About Me</h2>
       <div
         className="about-content"
         style={{
@@ -46,39 +44,14 @@ export default function About() {
           }}
         >
           <p style={{ fontSize: "4rem", fontWeight: "bolder" }}>5+</p>{" "}
-          <h2>Years of Experience</h2>
+          <p style={{ fontSize: "1.1rem", fontWeight: 600 }} className=" font">
+            Years of Experience
+          </p>
         </div>
-        <div>
-        {/* <Timeline
-        style={{color:'white'}}
-        mode={"left"}
-        items={[
-          {
-            label: 'Sept 2021',
-            children:  <Popover content={<div>
-              <p>Content</p>
-              <p>Content</p>
-            </div>} title="Title">
-            <Button type="primary">Hover me</Button>
-          </Popover>,
-          },
-          {
-            label: 'Jan 2022',
-            children: 'Solve initial network problems',
-          },
-          { label: 'Nov 2023',
-            children: 'Technical testing',
-          },
-          {
-            label: 'Aug 2024',
-            children: 'Network problems being solved',
-          },
-        ]}
-      /> */}
-      <TimelineWithPopover/>
+        <div className=" relative w-full min-h-[70vh]">         
+          <TimelineWithPopover />
+        </div>
       </div>
-      </div>
-      
-    </section>
+    </section> 
   );
 }

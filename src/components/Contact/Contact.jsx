@@ -1,5 +1,5 @@
 import "./contact.css";
-import { Button, Checkbox, Form, Input, Flex,Typography } from "antd";
+import { Button, Checkbox, Form, Input, Flex, Typography } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -15,8 +15,9 @@ const Contact = () => {
       <div className="contact-container">
         <div className=" contact-item-container">
           <p className="contact-title">Connect with me</p>
-          <Typography style={{color:'white',fontSize:'18px'}}>
-          I'm so glad you're here! Let's connect and see how we can work together.
+          <Typography style={{ color: "white", fontSize: "18px" }}>
+            I'm so glad you're here! Let's connect and see how we can work
+            together.
           </Typography>
           <div
             style={{
@@ -24,12 +25,11 @@ const Contact = () => {
               flexWrap: "wrap",
               flexDirection: "row",
               gap: "1rem",
-              alignContent:'center',
-              justifyContent:'center',
-              marginTop:'10px'
+              alignContent: "center",
+              justifyContent: "center",
+              marginTop: "10px",
             }}
           >
-
             <Button
               className="contact-item"
               style={{
@@ -126,7 +126,12 @@ const Contact = () => {
               />
             </Form.Item>
             <Form.Item>
-              <Button block type="primary" htmlType="submit" style={{ backgroundColor: '#6c63ff', border: 'none' }}>
+              <Button
+                block
+                type="primary"
+                htmlType="submit"
+                style={{ backgroundColor: "#6c63ff", border: "none" }}
+              >
                 Send Message
               </Button>
             </Form.Item>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Timeline, Popover, Button } from "antd";
 import { BookOutlined } from "@ant-design/icons";
+import { div } from "motion/react-client";
 
 const TimelineWithPopover = () => {
   const timelineItems = [
@@ -37,11 +38,13 @@ const TimelineWithPopover = () => {
   ];
 
   return (
+    <div className=" absolute left-1/2 transform -translate-x-1/2 mt-10">
     <Timeline
       style={{ color: "white", width: "20rem" }}
       mode="left"
       items={timelineItems}
     />
+    </div>
   );
 };
 

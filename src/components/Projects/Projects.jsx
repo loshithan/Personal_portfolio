@@ -30,7 +30,7 @@ export default function Projects() {
   ];
   const screens = useBreakpoint();
    // Group projects into slides of 3 items each
-   const projectChunks =screens.xs? chunkArray(projects, 1):chunkArray(projects, 3);
+   const projectChunks =screens.lg?chunkArray(projects, 3): screens.md?chunkArray(projects, 2): screens.sm? chunkArray(projects, 2):chunkArray(projects, 1);
 
   return (
     <section id="projects" style={{ padding: '4rem 2rem' }}>

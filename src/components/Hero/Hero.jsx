@@ -149,109 +149,109 @@
 //               Full Stack Developer
 //             </span>
 //           </motion.h3>
-          // <div style={{ marginTop: "2rem" }}>
-          //   <Row gutter={16} style={{ marginLeft: "-16px" }}>
-          //     <motion.button
-          //       size="large"
-          //       style={{
-          //         margin: "0 1rem",
-          //         padding: "0.5rem 1rem",
-          //         border: "none",
-          //         cursor: "pointer",
-          //         display: "flex", // Use flexbox for alignment
-          //         alignItems: "center",
-          //         justifyContent: "space-between", // Adjust spacing between items
-          //       }}
-          //       type="default"
-          //       initial="initial"
-          //       whileHover="hover"
-          //       animate="animate"
-          //       variants={backgroundVariantBtn}
-          //     >
-          //       <div className="overflow-hidden relative">
-          //         <motion.p
-          //           variants={firstTextVariant}
-          //           style={{ margin: 0, fontWeight: 700 }}
-          //         >
-          //           About me
-          //           <motion.span
-          //             variants={firstTextVariant}
-          //             style={{ fontSize: "1.2rem" }}
-          //             className=" material-icons "
-          //           >
-          //             person
-          //           </motion.span>
-          //         </motion.p>
+// <div style={{ marginTop: "2rem" }}>
+//   <Row gutter={16} style={{ marginLeft: "-16px" }}>
+//     <motion.button
+//       size="large"
+//       style={{
+//         margin: "0 1rem",
+//         padding: "0.5rem 1rem",
+//         border: "none",
+//         cursor: "pointer",
+//         display: "flex", // Use flexbox for alignment
+//         alignItems: "center",
+//         justifyContent: "space-between", // Adjust spacing between items
+//       }}
+//       type="default"
+//       initial="initial"
+//       whileHover="hover"
+//       animate="animate"
+//       variants={backgroundVariantBtn}
+//     >
+//       <div className="overflow-hidden relative">
+//         <motion.p
+//           variants={firstTextVariant}
+//           style={{ margin: 0, fontWeight: 700 }}
+//         >
+//           About me
+//           <motion.span
+//             variants={firstTextVariant}
+//             style={{ fontSize: "1.2rem" }}
+//             className=" material-icons "
+//           >
+//             person
+//           </motion.span>
+//         </motion.p>
 
-          //         <motion.p
-          //           variants={secondTextVariant}
-          //           aria-hidden
-          //           style={{ margin: 0, fontWeight: 700 }}
-          //           className="absolute top-0 left-0 "
-          //         >
-          //           About me
-          //           <motion.span
-          //             variants={secondTextVariant}
-          //             aria-hidden
-          //             style={{ fontSize: "1.2rem" }}
-          //             className=" material-icons "
-          //           >
-          //             person
-          //           </motion.span>
-          //         </motion.p>
-          //       </div>
-          //     </motion.button>
-          //     <motion.button
-          //       size="large"
-          //       style={{
-          //         margin: "0 1rem",
-          //         padding: "0.5rem 1rem",
-          //         cursor: "pointer",
-          //         display: "flex", // Use flexbox for alignment
-          //         alignItems: "center",
-          //         justifyContent: "space-between", // Adjust spacing between items
-          //       }}
-          //       initial="initial"
-          //       whileHover="hover"
-          //       animate="animate"
-          //       variants={outlineBackgroundVariantBtn}
-          //       type="default"
-          //       // variant="outlined"
-          //     >
-          //       <div className="overflow-hidden relative">
-          //         <motion.p
-          //           style={{ margin: 0, fontWeight: 700 }}
-          //           variants={firstTextVariant}
-          //         >
-          //           Projects{" "}
-          //           <motion.span
-          //             class="material-icons"
-          //             style={{ fontSize: "1.2rem" }}
-          //             variants={firstTextVariant}
-          //           >
-          //             visibility
-          //           </motion.span>
-          //         </motion.p>
-          //         <motion.p
-          //           style={{ margin: 0, fontWeight: 700 }}
-          //           aria-hidden
-          //           className="absolute top-0 left-0 "
-          //           variants={secondTextVariant}
-          //         >
-          //           Projects{" "}
-          //           <motion.span
-          //             class="material-icons "
-          //             aria-hidden
-          //             style={{ fontSize: "1.2rem" }}
-          //             variants={secondTextVariant}
-          //           >
-          //             visibility
-          //           </motion.span>
-          //         </motion.p>
-          //       </div>
-          //     </motion.button>
-          //   </Row>
-          // </div>
+//         <motion.p
+//           variants={secondTextVariant}
+//           aria-hidden
+//           style={{ margin: 0, fontWeight: 700 }}
+//           className="absolute top-0 left-0 "
+//         >
+//           About me
+//           <motion.span
+//             variants={secondTextVariant}
+//             aria-hidden
+//             style={{ fontSize: "1.2rem" }}
+//             className=" material-icons "
+//           >
+//             person
+//           </motion.span>
+//         </motion.p>
+//       </div>
+//     </motion.button>
+//     <motion.button
+//       size="large"
+//       style={{
+//         margin: "0 1rem",
+//         padding: "0.5rem 1rem",
+//         cursor: "pointer",
+//         display: "flex", // Use flexbox for alignment
+//         alignItems: "center",
+//         justifyContent: "space-between", // Adjust spacing between items
+//       }}
+//       initial="initial"
+//       whileHover="hover"
+//       animate="animate"
+//       variants={outlineBackgroundVariantBtn}
+//       type="default"
+//       // variant="outlined"
+//     >
+//       <div className="overflow-hidden relative">
+//         <motion.p
+//           style={{ margin: 0, fontWeight: 700 }}
+//           variants={firstTextVariant}
+//         >
+//           Projects{" "}
+//           <motion.span
+//             class="material-icons"
+//             style={{ fontSize: "1.2rem" }}
+//             variants={firstTextVariant}
+//           >
+//             visibility
+//           </motion.span>
+//         </motion.p>
+//         <motion.p
+//           style={{ margin: 0, fontWeight: 700 }}
+//           aria-hidden
+//           className="absolute top-0 left-0 "
+//           variants={secondTextVariant}
+//         >
+//           Projects{" "}
+//           <motion.span
+//             class="material-icons "
+//             aria-hidden
+//             style={{ fontSize: "1.2rem" }}
+//             variants={secondTextVariant}
+//           >
+//             visibility
+//           </motion.span>
+//         </motion.p>
+//       </div>
+//     </motion.button>
+//   </Row>
+// </div>
 //         </Col>
 //         <Col>
 //           <div>
@@ -272,7 +272,7 @@
 // }
 import React, { useRef } from "react";
 import "./hero.css";
-import { Row, Col,Grid } from "antd";
+import { Row, Col, Grid } from "antd";
 import { motion, useInView } from "framer-motion";
 const { useBreakpoint } = Grid;
 
@@ -281,7 +281,7 @@ export default function Hero() {
   const isInView = useInView(ref, { once: true });
   const screens = useBreakpoint();
 
-const variant = {
+  const variant = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
@@ -373,9 +373,12 @@ const variant = {
   };
 
   return (
-    <section className="hero-section" style={{ padding: "4rem 2rem", textAlign: "left" }}>
+    <section
+      className="hero-section"
+      style={{ padding: "4rem 2rem", textAlign: "left" }}
+    >
       <Row align="middle" gutter={[16, 16]} justify="center">
-        <Col xs={24} md={12} ref={ref}>
+        <Col xs={24} md={24} lg={12} ref={ref}>
           <motion.h2
             variants={variant}
             transition={transition}
@@ -409,7 +412,7 @@ const variant = {
           <div style={{ marginTop: "2rem" }}>
             <Row gutter={16} style={{ marginLeft: "-16px" }}>
               <motion.button
-                size={screens.sm?"small":"large"}
+                size={screens.sm ? "small" : "large"}
                 style={{
                   margin: "0 1rem",
                   padding: "0.5rem 1rem",
@@ -430,14 +433,16 @@ const variant = {
                     variants={firstTextVariant}
                     style={{ margin: 0, fontWeight: 700 }}
                   >
-                    About me
-                    <motion.span
-                      variants={firstTextVariant}
-                      style={{ fontSize: "1.2rem" }}
-                      className=" material-icons "
-                    >
-                      person
-                    </motion.span>
+                    <div className="flex items-center gap-2">
+                      About me
+                      <motion.span
+                        variants={firstTextVariant}
+                        style={{ fontSize: "1.2rem" }}
+                        className="material-icons"
+                      >
+                        person
+                      </motion.span>
+                    </div>
                   </motion.p>
 
                   <motion.p
@@ -446,15 +451,17 @@ const variant = {
                     style={{ margin: 0, fontWeight: 700 }}
                     className="absolute top-0 left-0 "
                   >
-                    About me
-                    <motion.span
-                      variants={secondTextVariant}
-                      aria-hidden
-                      style={{ fontSize: "1.2rem" }}
-                      className=" material-icons "
-                    >
-                      person
-                    </motion.span>
+                    <div className="flex items-center gap-2">
+                      About me
+                      <motion.span
+                        variants={secondTextVariant}
+                        aria-hidden
+                        style={{ fontSize: "1.2rem" }}
+                        className=" material-icons "
+                      >
+                        person
+                      </motion.span>
+                    </div>
                   </motion.p>
                 </div>
               </motion.button>
@@ -480,14 +487,16 @@ const variant = {
                     style={{ margin: 0, fontWeight: 700 }}
                     variants={firstTextVariant}
                   >
-                    Projects{" "}
-                    <motion.span
-                      class="material-icons"
-                      style={{ fontSize: "1.2rem" }}
-                      variants={firstTextVariant}
-                    >
-                      visibility
-                    </motion.span>
+                    <div className="flex items-center gap-2">
+                      Projects{" "}
+                      <motion.span
+                        class="material-icons"
+                        style={{ fontSize: "1.2rem" }}
+                        variants={firstTextVariant}
+                      >
+                        visibility
+                      </motion.span>
+                    </div>
                   </motion.p>
                   <motion.p
                     style={{ margin: 0, fontWeight: 700 }}
@@ -495,22 +504,29 @@ const variant = {
                     className="absolute top-0 left-0 "
                     variants={secondTextVariant}
                   >
-                    Projects{" "}
-                    <motion.span
-                      class="material-icons "
-                      aria-hidden
-                      style={{ fontSize: "1.2rem" }}
-                      variants={secondTextVariant}
-                    >
-                      visibility
-                    </motion.span>
+                    <div className="flex items-center gap-2">
+                      Projects{" "}
+                      <motion.span
+                        class="material-icons "
+                        aria-hidden
+                        style={{ fontSize: "1.2rem" }}
+                        variants={secondTextVariant}
+                      >
+                        visibility
+                      </motion.span>
+                    </div>
                   </motion.p>
                 </div>
               </motion.button>
             </Row>
           </div>
         </Col>
-        <Col xs={24} md={12} style={{ display: "flex", justifyContent: "center" }}>
+        <Col
+          xs={24}
+          md={24}
+          lg={12}
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <motion.img
             src="/assets/circle.png"
             alt="circle"
@@ -528,4 +544,3 @@ const variant = {
     </section>
   );
 }
-

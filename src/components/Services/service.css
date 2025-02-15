@@ -2,8 +2,7 @@
   color: var(--primary-color);
 }
 @media screen and (max-width: 767px) {
-  .service-box {
-    width: 100% !important;
-    margin: 10px 30px !important;
+  #services {
+  padding: 0 3rem !important;
   }
 }

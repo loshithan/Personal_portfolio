@@ -49,5 +49,12 @@
     .ant-carousel .slick-next {
       right: -30px; /* Moves it further right */
     }
+   
+  }
+  @media (min-width: 576px) and (max-width: 997px) {
+    .project-box {
+      max-width: 350px !important;
+
+    }
   }
   

@@ -60,6 +60,12 @@ Content{
   section{
     padding: 0 !important;
     overflow-x: hidden !important;
+    padding-top: 6rem !important;
+  }
+  section h2{
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+  
   }
 
 }

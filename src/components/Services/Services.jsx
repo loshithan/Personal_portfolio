@@ -41,7 +41,7 @@ export default function Services() {
   return (
     <section id="services" style={{ padding: "4rem 2rem" }}>
       <h2 className="service-title">Services</h2>
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -67,6 +67,18 @@ export default function Services() {
             <div style={{ fontSize: "4rem" }}>{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
+          </div>
+        ))}
+      </div> */}
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center border-2 border-gray-300 p-6 rounded-lg transition duration-300 hover:shadow-lg hover:border-blue-500"
+          >
+            <div className="text-6xl mb-4">{service.icon}</div>
+            <h3 >{service.title}</h3>
+            <p >{service.description}</p>
           </div>
         ))}
       </div>
