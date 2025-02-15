@@ -29,6 +29,9 @@ function App() {
         },
         Menu:{
           darkItemSelectedBg:"transparent"
+        },
+        Header:{
+          headerBg:"var(--secondary-color)"
         }
       },
     }}>
