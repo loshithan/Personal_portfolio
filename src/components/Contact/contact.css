@@ -12,11 +12,10 @@ Input{
     border: 2px solid white;
 } */
 .contact-item-container{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px; */
 }
 .contact-container{
     display: flex;
@@ -29,7 +28,8 @@ Input{
 }
 .contact-title{
     margin-top: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 .contact-form{
     width: 40%;

@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className=" contact-item-container">
           <p className="contact-title">Connect with me</p>
-          <Typography style={{ color: "white", fontSize: "18px" }}>
+          <Typography style={{ color: "white", fontSize: "1rem",width:"80%",marginTop:"2rem" }}>
             I'm so glad you're here! Let's connect and see how we can work
             together.
           </Typography>
@@ -27,50 +27,59 @@ const Contact = () => {
               gap: "1rem",
               alignContent: "center",
               justifyContent: "center",
-              marginTop: "10px",
+              marginTop: "1rem",
             }}
           >
             <Button
-              className="contact-item"
+              className="relative flex items-center justify-center overflow-hidden border-2 border-white text-white shadow-2xl transition-all 
+ before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#7562E0] before:duration-500 before:ease-out 
+ hover:shadow-[#7562E0] hover:before:h-56 hover:before:w-56 hover:bg-[#7562E0] hover:border-0 
+ active:border-transparent"
               style={{
-                border: "2px solid white",
-                color: "white",
                 backgroundColor: "transparent",
+                outline: "none",
+                color: "white",
                 display: "flex",
                 alignItems: "center",
                 gap: "0.5rem",
               }}
             >
-              GitHub
-              <FaGithub />
+              <span className="relative z-10">GitHub</span>
+              <FaGithub className="relative z-10" />
             </Button>
             <Button
-              className="contact-item"
+              className="relative flex items-center justify-center overflow-hidden border-2 border-white text-white shadow-2xl transition-all 
+              before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#7562E0] before:duration-500 before:ease-out 
+              hover:shadow-[#7562E0] hover:before:h-56 hover:before:w-56 hover:bg-[#7562E0] hover:border-0 
+              active:border-transparent"
               style={{
-                border: "2px solid white",
-                color: "white",
                 backgroundColor: "transparent",
+                outline: "none",
+                color: "white",
                 display: "flex",
                 alignItems: "center",
                 gap: "0.5rem",
               }}
             >
-              LinkedIn
-              <FaLinkedin />
+              <span className="relative z-10">LinkedIn</span>
+              <FaLinkedin className="relative z-10" />
             </Button>
             <Button
-              className="contact-item"
+              className="relative flex items-center justify-center overflow-hidden border-2 border-white text-white shadow-2xl transition-all 
+             before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#7562E0] before:duration-500 before:ease-out 
+             hover:shadow-[#7562E0] hover:before:h-56 hover:before:w-56 hover:bg-[#7562E0] hover:border-0 
+             active:border-transparent"
               style={{
-                border: "2px solid white",
-                color: "white",
                 backgroundColor: "transparent",
+                outline: "none",
+                color: "white",
                 display: "flex",
                 alignItems: "center",
                 gap: "0.5rem",
               }}
             >
-              Instagram
-              <FaInstagram />
+              <span className="relative z-10">Instagram</span>
+              <FaInstagram className="relative z-10" />
             </Button>
           </div>
         </div>

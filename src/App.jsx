@@ -32,6 +32,10 @@ function App() {
         },
         Header:{
           headerBg:"var(--secondary-color)"
+        },
+        Button:{
+          defaultActiveBorderColor:"transparent",
+          defaultHoverBorderColor:"transparent",
         }
       },
     }}>
