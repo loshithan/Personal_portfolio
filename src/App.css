@@ -60,7 +60,8 @@ Content{
   section{
     padding: 0 !important;
     overflow-x: hidden !important;
-    padding-top: 6rem !important;
+    padding-top: 3rem !important;
+    overflow: auto; /* Remove this if not needed */
   }
   section h2{
     font-size: 1.25rem !important;

@@ -117,6 +117,7 @@ import { Layout, Menu, Grid, theme, Button, Drawer } from "antd"; // Import Draw
 import "./header.css";
 import { motion } from "framer-motion";
 import { MenuOutlined } from "@ant-design/icons";
+import { header } from "motion/react-client";
 
 const { Header } = Layout;
 const { useToken } = theme;
@@ -250,13 +251,20 @@ export default function AppHeader() {
             style={{ marginLeft: "auto", color: "var(--primary-color)",float:"right",position:'absolute',top:'16px',right:0,border:'none',outline:'none' }} // Style the button
           />
           <Drawer // Mobile Drawer
-            title="Navigation"
+            title="Menu"
             placement="right"
             closable={true}
             onClose={onClose}
-            visible={visible}
-            style={{ backgroundColor: "var(--secondary-color)" }}
-          >
+            open={visible}
+            style={{
+              header: {
+                fontSize: "1.5rem",
+                fontWeight: 600,
+              },
+              backgroundColor: "var(--secondary-color)",
+              color: "var(--text-color)"
+            }}
+                      >
             <Menu
               theme="dark"
               mode="vertical" // Vertical menu in the drawer
@@ -264,6 +272,8 @@ export default function AppHeader() {
               onClick={handleMenuClick}
               style={{
                 backgroundColor: "var(--secondary-color)",
+                fontSize: "1.1rem",
+                fontWeight: 600,
               }}
               items={menuItems}
             />

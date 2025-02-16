@@ -24,3 +24,6 @@
     font-size: 1.25rem !important;
   }  
 }
+.ant-drawer-content .ant-menu-item:focus {
+  background-color: var(--primary-color) !important;
+}
