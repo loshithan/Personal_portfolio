@@ -204,7 +204,7 @@ export default function About() {
 
         {/* Timeline */}
         <motion.div 
-          className="relative w-full min-h-[70vh]"
+          className="relative w-full min-h-[130vh]"
           variants={{
             hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 }
