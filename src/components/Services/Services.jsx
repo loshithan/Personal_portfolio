@@ -3,42 +3,61 @@ import React, { useRef } from "react";
 import "./service.css";
 import { AiOutlineDotNet } from "react-icons/ai";
 import { SiBlazor } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
 import useAnimation from "../Hooks/CustomHooks";
 import { motion, useInView } from "framer-motion";
+import { AiOutlineGlobal, AiOutlineApi } from "react-icons/ai";
+import { FaCloud, FaBrain, FaReact } from "react-icons/fa";
 
 export default function Services() {
   const { sectionTitleAnimation,sectionAnimation,ref,containerAnimation,gridItemAnimation } = useAnimation();
   const services = [
     {
-      title: "UI & UX Designing",
-      description: "I design beautiful web interfaces with Figma and Adobe XD.",
-      icon: <SiBlazor />,
-    },
-    {
-      title: "Web Development",
+      title: "Full-Stack Web Development",
       description:
-        "I create beautiful interfaces with HTML, CSS, & JS.I create beautiful interfaces with HTML, CSS, & JS.",
-      icon: <AiOutlineDotNet />,
+        "I build scalable web applications using .NET (ASP.NET Core, MVC, Blazor) with modern frontend frameworks like React, Angular, and Vue.",
+      icon: <AiOutlineGlobal />,
     },
     {
-      title: "Mobile Development",
-      description: "I use Flutter and React Native to build apps.",
+      title: "Backend Development & API Design",
+      description:
+        "I design and implement high-performance APIs using ASP.NET Web API, with database management using SQL Server, PostgreSQL, or MongoDB.",
+      icon: <AiOutlineApi />,
+    },
+    {
+      title: "Cloud & DevOps Solutions",
+      description:
+        "I deploy applications on Azure, AWS, and Google Cloud, and set up CI/CD pipelines using GitHub Actions, Azure DevOps, or Jenkins.",
+      icon: <FaCloud />,
+    },
+    {
+      title: "Machine Learning Solutions",
+      description:
+        "I develop AI-powered applications using ML.NET, TensorFlow, or PyTorch, focusing on predictive analytics, recommendation systems, and automation tools.",
+      icon: <FaBrain />,
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "I build cross-platform mobile applications using .NET MAUI, Flutter, or React Native, integrating backend APIs for real-time data synchronization.",
+      icon: <AiFillAndroid />,
+    },
+    {
+      title: "UI/UX & Frontend Development",
+      description:
+        "I design and develop interactive, responsive web interfaces using React, Angular, or Blazor for seamless user experiences.",
       icon: <FaReact />,
     },
     {
-      title: "Mobile Development",
-      description: "I use Flutter and React Native to build apps.",
-      icon: <FaGitAlt />,
-    },
-    {
-      title: "Mobile Development",
-      description: "I use Flutter and React Native to build apps.",
-      icon: <AiFillAndroid />,
+      title: "Enterprise Software & SaaS Development",
+      description:
+        "I develop ERP, CRM, and SaaS solutions using .NET, microservices architecture, and cloud integrations for B2B platforms.",
+      icon: <SiBlazor />,
     },
   ];
+  
+  
 
   return (
     <motion.section
@@ -65,8 +84,9 @@ export default function Services() {
             className="flex flex-col items-center justify-center border-2 border-gray-300 p-6 rounded-lg transition duration-300 hover:shadow-lg hover:border-blue-500"
           >
             <div className="text-6xl mb-4">{service.icon}</div>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
+            <h3 className="font-black mb-2
+">{service.title}</h3>
+            <p className="text-[#b6babe]">{service.description}</p>
           </motion.div>
         ))}
       </motion.div>
