@@ -46,6 +46,12 @@
     width: 175%;
 
  }
+ .timeline-description{
+   color: #b6babe;
+ }
+ .timeline-title{
+   font-weight: 800;
+ }
  @media screen and (max-width: 767px) {
    .timeline-content{
       width: 100% !important;

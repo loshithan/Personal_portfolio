@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import "./hero.css";
 import { Row, Col, Grid } from "antd";
 import { motion, useInView } from "framer-motion";
@@ -99,7 +99,41 @@ export default function Hero() {
       },
     },
   };
+  useEffect(() => {
+    // Function to load the Chatbase script
+    const loadChatbase = () => {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...args) => {
+          if (!window.chatbase.q) window.chatbase.q = [];
+          window.chatbase.q.push(args);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args);
+          },
+        });
+      }
 
+      const script = document.createElement("script");
+      script.src = "https://www.chatbase.co/embed.min.js";
+      script.id = "02s-AzAsDYJPCwwyoeDNV";
+      script.domain = "www.chatbase.co";
+      document.body.appendChild(script);
+    };
+
+    // Load Chatbase when component mounts
+    if (document.readyState === "complete") {
+      loadChatbase();
+    } else {
+      window.addEventListener("load", loadChatbase);
+    }
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("load", loadChatbase);
+    };
+  }, []);
   return (
     <section
       className="hero-section"
@@ -268,7 +302,8 @@ export default function Hero() {
             // transition={{ duration: 2, ease: "easeInOut" }}
           />
         </Col>
-      </Row>
+      </Row>    
+
     </section>
   );
 }
