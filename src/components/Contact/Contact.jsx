@@ -15,7 +15,14 @@ const Contact = () => {
       <div className="contact-container">
         <div className=" contact-item-container">
           <p className="contact-title">Connect with me</p>
-          <Typography style={{ color: "white", fontSize: "1rem",width:"80%",marginTop:"2rem" }}>
+          <Typography
+            style={{
+              color: "white",
+              fontSize: "1rem",
+              width: "80%",
+              marginTop: "2rem",
+            }}
+          >
             I'm so glad you're here! Let's connect and see how we can work
             together.
           </Typography>
@@ -35,6 +42,9 @@ const Contact = () => {
  before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#7562E0] before:duration-500 before:ease-out 
  hover:shadow-[#7562E0] hover:before:h-56 hover:before:w-56 hover:bg-[#7562E0] hover:border-0 
  active:border-transparent"
+ onClick={() => {
+  window.open("https://github.com/loshithan", "_blank");
+}}
               style={{
                 backgroundColor: "transparent",
                 outline: "none",
@@ -60,6 +70,9 @@ const Contact = () => {
                 alignItems: "center",
                 gap: "0.5rem",
               }}
+              onClick={() => {
+                window.open("https://www.linkedin.com/in/loshithan-paramaguru-11746b222", "_blank");
+              }}
             >
               <span className="relative z-10">LinkedIn</span>
               <FaLinkedin className="relative z-10" />
@@ -76,6 +89,9 @@ const Contact = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: "0.5rem",
+              }}
+              onClick={() => {
+                window.open("https://www.instagram.com/its_yoshi__?igsh=OWYxcTgxaml5dmxr", "_blank");
               }}
             >
               <span className="relative z-10">Instagram</span>

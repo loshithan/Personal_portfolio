@@ -68,6 +68,10 @@ section h2{
   margin-bottom: 3rem;
 
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
