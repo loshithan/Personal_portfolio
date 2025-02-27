@@ -1,4 +1,4 @@
-import React, { useRef,useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "./hero.css";
 import { Row, Col, Grid } from "antd";
 import { motion, useInView } from "framer-motion";
@@ -190,6 +190,8 @@ export default function Hero() {
                 animate="animate"
                 variants={backgroundVariantBtn}
               >
+                 <a href="#about" // Correct path to the file in the public folder
+                style={{textDecoration: "none", color: "inherit"}}>
                 <div className="overflow-hidden relative">
                   <motion.p
                     variants={firstTextVariant}
@@ -226,6 +228,7 @@ export default function Hero() {
                     </div>
                   </motion.p>
                 </div>
+                </a>
               </motion.button>
               <motion.button
                 size="large"
@@ -241,22 +244,32 @@ export default function Hero() {
                 whileHover="hover"
                 animate="animate"
                 variants={outlineBackgroundVariantBtn}
-                type="default"
+                type="default"                
                 // variant="outlined"
               >
+                <a href="/cv.pdf" // Correct path to the file in the public folder
+                download="LOSHITHAN PARAMAGURU - Fullstack .NET Developer.pdf"
+                style={{textDecoration: "none", color: "inherit"}}>
                 <div className="overflow-hidden relative">
                   <motion.p
                     style={{ margin: 0, fontWeight: 700 }}
                     variants={firstTextVariant}
                   >
                     <div className="flex items-center gap-2">
-                      Projects{" "}
-                      <motion.span
+                      Download CV{" "}
+                      {/* <motion.span
                         class="material-icons"
                         style={{ fontSize: "1.2rem" }}
                         variants={firstTextVariant}
                       >
                         visibility
+                      </motion.span> */}
+                      <motion.span
+                        class="material-symbols-outlined"
+                        style={{ fontSize: "1.2rem" }}
+                        variants={firstTextVariant}
+                      >
+                        download
                       </motion.span>
                     </div>
                   </motion.p>
@@ -266,19 +279,21 @@ export default function Hero() {
                     className="absolute top-0 left-0 "
                     variants={secondTextVariant}
                   >
+                    {" "}
                     <div className="flex items-center gap-2">
-                      Projects{" "}
+                      Download CV{" "}
                       <motion.span
-                        class="material-icons "
+                        class="material-symbols-outlined"
                         aria-hidden
                         style={{ fontSize: "1.2rem" }}
                         variants={secondTextVariant}
                       >
-                        visibility
+                        download
                       </motion.span>
                     </div>
                   </motion.p>
                 </div>
+                </a>
               </motion.button>
             </Row>
           </div>
@@ -302,8 +317,7 @@ export default function Hero() {
             // transition={{ duration: 2, ease: "easeInOut" }}
           />
         </Col>
-      </Row>    
-
+      </Row>
     </section>
   );
 }
