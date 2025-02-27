@@ -90,7 +90,7 @@ export default function AppHeader() {
         top: 0,
         width: "100%",
         zIndex: 1,
-        backgroundColor: "var(--secondary-color) !important",
+        backgroundColor: "var(--secondary-color)",
       }}
     >
       <motion.div

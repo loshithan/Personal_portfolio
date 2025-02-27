@@ -134,11 +134,11 @@ export default function About() {
       style={{ padding: "4rem 2rem" }}
     >
       {/* Wrap animations in motion.div for staggerChildren */}
-      <motion.div 
+      <motion.div
         className="about-container"
         variants={{
           visible: { transition: { staggerChildren: 0.3 } },
-          hidden: {}
+          hidden: {},
         }}
         style={{
           display: "flex",
@@ -151,7 +151,7 @@ export default function About() {
         <motion.h2
           variants={{
             hidden: { opacity: 0, y: -50 },
-            visible: { opacity: 1, y: 0 }
+            visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="about-me"
@@ -165,24 +165,24 @@ export default function About() {
           style={{ maxWidth: "600px" }}
           variants={{
             hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 }
+            visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1, ease: "easeIn", delay: 0.5 }}
         >
-          Hi, my name is Loshithan. I am a Fullstack web developer, UI designer, 
-          and Mobile developer. I have honed my skills in Web Development and 
+          Hi, my name is Loshithan. I am a Fullstack web developer, UI designer,
+          and Mobile developer. I have honed my skills in Web Development and
           advanced UI design principles.
         </motion.p>
 
         {/* Experience Block */}
-        <motion.div 
+        <motion.div
           className="about-text2"
           style={{ display: "flex", gap: "10px", alignItems: "center" }}
         >
           <motion.p
             variants={{
               hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 }
+              visible: { opacity: 1, x: 0 },
             }}
             transition={{ duration: 1, ease: "easeIn", delay: 0.5 }}
             style={{ fontSize: "4rem", fontWeight: "bolder" }}
@@ -193,7 +193,7 @@ export default function About() {
           <motion.p
             variants={{
               hidden: { opacity: 0, x: 50 },
-              visible: { opacity: 1, x: 0 }
+              visible: { opacity: 1, x: 0 },
             }}
             transition={{ duration: 1, ease: "easeIn", delay: 0.5 }}
             style={{ fontSize: "1.1rem", fontWeight: 600 }}
@@ -203,11 +203,11 @@ export default function About() {
         </motion.div>
 
         {/* Timeline */}
-        <motion.div 
-          className="relative w-full min-h-[120vh]"
+        <motion.div
+          className="relative w-full min-h-[90vh] md:min-h-[120vh]"
           variants={{
             hidden: { opacity: 0, y: 100 },
-            visible: { opacity: 1, y: 0 }
+            visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
         >
