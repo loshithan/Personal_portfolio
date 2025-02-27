@@ -33,8 +33,8 @@ export default function Projects() {
     chunkIndex,
     totalChunks = screens.lg ? 3 : screens.md ? 2 : screens.sm ? 2 : 3
   ) => {
-    console.log(screens,"screens");
-    
+    console.log(screens, "screens");
+
     if (totalChunks === 1) {
       // Single chunk - from bottom
       return {
@@ -69,54 +69,89 @@ export default function Projects() {
             animate: { opacity: 1, y: 0 },
             transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
           }
-        : chunkIndex === 2?{
+        : chunkIndex === 2
+        ? {
             initial: { opacity: 0, x: 100 },
             animate: { opacity: 1, x: 0 },
             transition: { duration: 0.6, ease: "easeOut", delay: 0.3 },
-          }:{
-            initial: { },
-            animate: { },
-            transition: {  },
+          }
+        : {
+            initial: {},
+            animate: {},
+            transition: {},
           };
     }
   };
   const projects = [
     {
-      title: "Twinder",
-      description: "A live Geolocation app for finding tweets.",
+      title: "Empfee UI",
+      techStack: ["React", "Next.js", "Tailwind CSS", "Ant Design"],
+      description:
+        "A responsive and interactive UI that allows HR teams to collect employee feedback, manage forms, and visualize insights using dynamic charts.",
+      features: [
+        "Employee form submission",
+        "Real-time data visualization",
+        "Authentication and authorization",
+        "Dark mode support",
+      ],
       link: "#",
     },
     {
-      title: "Events",
-      description: "A video streaming app with live Geolocation.",
+      title: "Empfee Backend",
+
+      techStack: [".NET Core", "Node.js (Express)", "PostgreSQL"],
+      description:
+        "Handles API requests, user authentication, and securely stores employee feedback data for further analysis.",
+      features: [
+        "User authentication (JWT-based)",
+        "RESTful APIs for form management",
+        "Database integration with PostgreSQL",
+        "Role-based access control",
+      ],
       link: "#",
     },
     {
-      title: "Moove",
-      description: "Mobile app for instant pickup and drop-off.",
+      title: "Empfee ML",
+      techStack: ["Python", "FastAPI", "TensorFlow/PyTorch", "Scikit-learn"],
+      description:
+        "A machine learning service that processes employee feedback using NLP techniques to determine sentiment and engagement levels.",
+      features: [
+        "Sentiment analysis using NLP",
+        "Topic modeling for employee concerns",
+        "Predictive analytics for HR decision-making",
+        "API endpoints for real-time data processing",
+      ],
       link: "#",
     },
     {
-      title: "ShopEasy",
-      description: "E-commerce platform with AI recommendations.",
+      title: "ScholarX UI",
+      techStack: ["Python", "FastAPI", "TensorFlow/PyTorch", "Scikit-learn"],
+      description:"An open-source GitHub project providing tools and resources to enhance and innovate educational experiences.",
+      features: [
+        "Sentiment analysis using NLP",
+        "Topic modeling for employee concerns",
+        "Predictive analytics for HR decision-making",
+        "API endpoints for real-time data processing",
+      ],
       link: "#",
     },
     {
-      title: "TaskFlow",
-      description: "Task management tool with Kanban boards.",
-      link: "#",
-    },
-    {
-      title: "HealthTrack",
-      description: "Health monitoring app for fitness tracking.",
+      title: "Personal portfolio",
+      techStack: ["Python", "FastAPI", "TensorFlow/PyTorch", "Scikit-learn"],
+      description:"web portfolio for personal branding and showcasing projects, skills, and achievements.",
+      features: [
+        "Sentiment analysis using NLP",
+        "Topic modeling for employee concerns",
+        "Predictive analytics for HR decision-making",
+        "API endpoints for real-time data processing",
+      ],
       link: "#",
     },
   ];
-  const screens = useBreakpoint() || {}
-  ;
+  const screens = useBreakpoint() || {};
   useEffect(() => {}, [screens]);
-  console.log(screens,"screens");
-  
+  console.log(screens, "screens");
+
   // Group projects into slides of 3 items each
   const projectChunks = screens.lg
     ? chunkArray(projects, 3)
@@ -154,19 +189,10 @@ export default function Projects() {
               >
                 {chunk.map((project, idx) => (
                   <motion.div
-                    initial={
-                      getChunkAnimation(idx)
-                        .initial
-                    }
-                    animate={
-                      getChunkAnimation(idx)
-                        ?.animate
-                    }
-                    transition={
-                      getChunkAnimation(idx)
-                        ?.transition
-                    }
-                    viewport={{once: true}}
+                    initial={getChunkAnimation(idx).initial}
+                    animate={getChunkAnimation(idx)?.animate}
+                    transition={getChunkAnimation(idx)?.transition}
+                    viewport={{ once: true }}
                     key={idx}
                     className="project-box flex flex-col justify-between items-center"
                   >

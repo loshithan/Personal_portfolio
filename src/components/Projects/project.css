@@ -1,8 +1,9 @@
 .project-title {
   color: var(--primary-color);
 }
+
 .project-box {
-  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
   color: white;
   text-align: center;
   padding: 3rem;
@@ -11,7 +12,9 @@
   min-width: 250px;
   box-shadow: 0 0 15px 5px rgba(117, 98, 224, 0.2); /* Purple glow */
   flex: 1;
+  height: 100%; /* Ensure it stretches to fill available space */
 }
+
 .carousel-slide {
   display: flex;
   justify-content: center;
@@ -20,10 +23,18 @@
 }
 
 .project-group {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-fill with min width */
   gap: 20px;
+  align-items: stretch; /* Ensures all items stretch to the same height */
+  grid-auto-rows: minmax(300px, auto); /* Forces all items to be at least 300px in height */
 }
+
+.project-box .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 /* Position left arrow */
 .ant-carousel .slick-prev {
   left: -30px; /* Moves it further left */
@@ -33,23 +44,18 @@
 .ant-carousel .slick-next {
   right: -30px; /* Moves it further right */
 }
-.slick-arrow {
-  /* margin-top: 1rem; */
-}
-.project-box .title {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
+/* For small screens */
 @media screen and (max-width: 767px) {
   .ant-carousel .slick-prev {
-    left: -30px; /* Moves it further left */
+    left: -30px;
   }
 
-  /* Position right arrow */
   .ant-carousel .slick-next {
-    right: -30px; /* Moves it further right */
+    right: -30px;
   }
 }
+
+/* For medium-sized screens (e.g., tablets) */
 @media (min-width: 576px) and (max-width: 997px) {
   .project-box {
     max-width: 350px !important;
