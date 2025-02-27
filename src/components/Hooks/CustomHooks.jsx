@@ -5,7 +5,7 @@ const useAnimation = () => {
 
   const isInView = useInView(ref, {
     once: true,
-    amount: 0.5, // Trigger animation when 50% of the element is in the viewport
+    amount: 0.2, // Trigger animation when 50% of the element is in the viewport
   });
   const sectionTitleAnimation = {
     variants: {

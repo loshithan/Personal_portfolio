@@ -58,6 +58,9 @@
       width: 100% !important;
       font-size: 10px;
    } 
+   .about-container{
+      min-height: 150vh;
+   }
    .about-text{
       font-size: 1rem;
    }
