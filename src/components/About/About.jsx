@@ -122,7 +122,7 @@ import TimelineWithPopover from "./TimelineWithPopover";
 
 export default function About() {
   const ref = useRef();
-  const isInView = useInView(ref, { amount: 0.5, once: true });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
   return (
     <motion.section

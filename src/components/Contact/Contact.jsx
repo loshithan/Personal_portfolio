@@ -4,30 +4,34 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import emailjs from 'emailjs-com';
+import { toast, ToastContainer } from "react-toastify"; // Import react-toastify components
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   // Form submit handler
   const onFinish = (values) => {
     // Call EmailJS to send the email
+    console.log(values, values);
+
     emailjs
       .sendForm(
-        'service_72mgsfg',  // Replace with your EmailJS service ID
-        'service_72mgsfg',  // Replace with your EmailJS template ID
+        "service_72mgsfg", // Replace with your EmailJS service ID
+        "template_h4yfd5a", // Replace with your EmailJS template ID
         "#contact-form", // CSS selector for the form
-        '5Lr-eHT4ldkqv6raa'  // Replace with your EmailJS user ID
+        "5Lr-eHT4ldkqv6raa" // Replace with your EmailJS user ID
       )
       .then(
         (result) => {
-          message.success('Your message has been sent!');
+          // result.success("Your message has been sent!");
+          toast.success("Email sent successfully!"); // Display success toast
         },
         (error) => {
-          message.error('Failed to send your message. Please try again.');
+          message.error("Failed to send your message. Please try again.");
+          toast.error("Failed to send email. Please try again."); // Display error toast
         }
       );
   };
   const { TextArea } = Input;
-
 
   return (
     <section id="contact" style={{ padding: "4rem 2rem" }}>
@@ -187,9 +191,10 @@ const Contact = () => {
             </Form.Item>
           </Form>
         </div> */}
-        <div className="contact-form" id="contact-form">
+        <div className="contact-form">
           <Form
             name="contact"
+            id="contact-form"
             initialValues={{
               remember: true,
             }}
@@ -200,7 +205,7 @@ const Contact = () => {
           >
             {/* Name Input */}
             <Form.Item
-              name="Your Name"
+              name="Name"
               rules={[
                 {
                   required: true,
@@ -213,7 +218,7 @@ const Contact = () => {
 
             {/* Email Input */}
             <Form.Item
-              name="Your Email"
+              name="Email"
               rules={[
                 {
                   required: true,
@@ -228,17 +233,18 @@ const Contact = () => {
               />
             </Form.Item>
 
-            {/* Phone Number Input */}
+            {/* Phone Number Input
             <Form.Item name="Your Phone">
               <Input
                 prefix={<LockOutlined />}
                 type="phoneNumber"
                 placeholder="Your Phone Number"
+                value={"78977666778"}
               />
-            </Form.Item>
+            </Form.Item> */}
 
             {/* Message Input */}
-            <Form.Item name="Your Message">
+            <Form.Item name="Message">
               <TextArea
                 rows={4}
                 prefix={<LockOutlined />}
@@ -253,7 +259,7 @@ const Contact = () => {
                 type="primary"
                 htmlType="submit"
                 style={{ backgroundColor: "#6c63ff", border: "none" }}
-                disabled
+                // disabled
               >
                 Send Message
               </Button>
@@ -261,6 +267,18 @@ const Contact = () => {
           </Form>
         </div>
       </div>
+      {/* ToastContainer for react-toastify */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnVisibilityChange={false}
+        draggable={false}
+        pauseOnHover={false}
+      />
     </section>
   );
 };
